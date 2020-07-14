@@ -18,6 +18,7 @@ This repository is the starter code for the project: Students will fork and clon
 - Body-parser
 - Chance
 - md5
+- Moment
 
 ## Dev Dependencies
 - Nodemon
