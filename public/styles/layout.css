@@ -3,7 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
- 
+
 html {
   box-sizing: border-box;
 }
@@ -14,6 +14,10 @@ html {
 /*
  * Global layout stuff
  */
+
+ nav {
+  font-family: "Source Sans Pro";
+}
 
 body {
   color: #545149;
@@ -27,3 +31,26 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ .container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweet-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+  width: 60%;
+}
+
+article {
+  align-items: column;
+  border: solid;
+  margin-bottom: 0.5em;
+}

@@ -8,3 +8,12 @@
   flex-flow: column wrap;
   width: 100%
 }
+
+.head .name h2 {
+  color: white;
+  font-weight: 300;
+}
+
+.head .name h2 span {
+  font-weight: 600;
+}
