@@ -1,0 +1,18 @@
+.nav-Bar {
+  background-color: #4056A1;
+  height: 120px;
+  width: 100%;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Bungee";
+  color: #ffffff;
+  font-size: larger;
+  margin: 1.5em;
+}
