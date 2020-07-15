@@ -9,6 +9,12 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const escape = function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML
+}
+
 const createTweetElement = tweetObj => {
   //responsible for returning a tweet <article>
   //Must contain entire HTML structure of the tweet
@@ -25,7 +31,7 @@ const createTweetElement = tweetObj => {
     </div>
   </header>
     <div>
-      <span>${tweetObj.content.text}</span>
+      <span>${escape(tweetObj.content.text)}</span>
     </div>
   <footer class="tweet-foot">
     <div>
@@ -63,6 +69,23 @@ const getText = queryString => {
   return text.replace(/%20/g, " ");
 }
 
+const resetErrorMessage = violation => {
+  if (violation === 'over count') {
+    $(".error-message").hide();
+    $(".error-message").empty();
+    $(".error-message").append("<p>Your tweet is too long</p>")
+    $(".error-message").slideDown("slow");
+  } else if (violation === 'empty') {
+    $(".error-message").hide();
+    $(".error-message").empty();
+    $(".error-message").append("<p>Keep typing...</p>")
+    $(".error-message").slideDown("slow");
+  } else {
+    $(".error-message").hide();
+    $(".error-message").empty();
+  }
+}
+
 $(document).ready(function() {
   //Want to make a GET request
   const loadtweets = $.get('/tweets', function(data) {
@@ -75,10 +98,11 @@ $(document).ready(function() {
     const data = $('form').serialize()
     const dataLength = (getText(data)).length;
     if (dataLength > 140) {
-      alert('You wrote too many characters');
+      resetErrorMessage('over count');
     } else if (dataLength === 0) {
-      alert("You didn't write anything");
+      resetErrorMessage('empty');
     } else {
+      resetErrorMessage();
       const dataToPost = ajaxPost('/tweets', data, function() {
         $.get('/tweets', function(data) {
           renderTweets(data)

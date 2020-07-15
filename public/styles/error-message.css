@@ -1,0 +1,12 @@
+.error-message {
+  display: none;
+  background-color: #f4f1ec;
+  color: red;
+  font: "Source Sans Pro";
+  border: solid;
+  border-color: red;
+  font-size: 20px;
+  padding: 0.5em;
+  width: 100%;
+  text-align: center;
+}
