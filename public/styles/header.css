@@ -17,3 +17,11 @@
 .head .name h2 span {
   font-weight: 600;
 }
+
+@media only screen and (min-width:1024px) {
+  .head {
+    margin-top: 0.5em;
+    margin-left: 2em;
+    width: 500px
+  }
+}

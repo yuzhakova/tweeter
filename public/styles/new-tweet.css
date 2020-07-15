@@ -14,7 +14,7 @@ button {
   border: none;
   font-size: medium;
   font-family: "Bungee";
-  background-color:#4056A1;
+  background-color:#545149;
   color: #ffffff;
 }
 
@@ -47,4 +47,10 @@ textarea {
 /* red font when words count exceeds 140 char */
 .negative-count {
   color: red;
+}
+
+@media only screen and (min-width:1024px) {
+  .new-tweet {
+    width: 90%;
+  }
 }

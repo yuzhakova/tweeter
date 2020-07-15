@@ -11,6 +11,29 @@ article:hover {
   justify-content: space-between;
 }
 
+article .tweet-head div span{
+  font-size: 17px;
+  align-self: center;
+  font-weight: 300
+}
+
+article .tweet-head div:nth-child(2) {
+  display: none;
+}
+
+article:hover .tweet-head div:nth-child(2) {
+  display: contents;
+  font-size: 17px;
+  color: #b8b894;
+  font-weight: 600;
+}
+
+article div {
+  margin: 0.5em;
+  font-size: 20px;
+  font-weight: 600
+}
+
 .tweet-foot {
   padding: 2px;
   margin-top: 0.25em;
@@ -21,5 +44,29 @@ article:hover {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
+}
+
+.tweet-foot div span {
+  font-size: 15px;
+}
+
+.tweet-reactions {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width:1024px) {
+  .container {
+    width: 70%;
+    padding: 0;
+  }
+
+  .container .tweet-container article {
+    border: solid;
+  }
+
+  .tweet-container{
+    width: 90%;
+  }
 }
 

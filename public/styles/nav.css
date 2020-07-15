@@ -1,5 +1,5 @@
 .nav-Bar {
-  background-color: #4056A1;
+  background-color: #666973;
   height: 120px;
   width: 100%;
   color: #ffffff;
@@ -15,4 +15,58 @@
   color: #ffffff;
   font-size: larger;
   margin: 1.5em;
+}
+
+.nav-Bar footer .write {
+  outline: none;
+  border: none;
+  background-color: #666973;
+  color: #ffffff;
+  font-family: 'Sans-serif';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5em;
+  font-size: 75%;
+  font-weight: 10%;
+}
+
+/* Animation Code */
+@keyframes bouncing-arrow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(+10px); }
+  100% { transform: translateY(0); }
+}
+
+.nav-Bar footer .fas {
+  color: #fa8072;
+  font-size: larger;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+.nav-Bar footer .fa-angle-double-down {
+  animation-name: bouncing-arrow;
+  animation-timing-function: ease;
+}
+
+@media only screen and (min-width:1024px) {
+  .nav-Bar {
+    background-color: #666973;
+    background-image: none;
+    height: 120px;
+    width: 100%;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-Bar footer .write {
+    background-color: #666973;
+    background-image: none;
+  }
 }
