@@ -24,7 +24,7 @@ const createTweetElement = tweetObj => {
     </div>
   <footer class="tweet-foot">
     <div>
-      <span>${tweetObj.created_at}</span>
+    <span>${moment(tweetObj.created_at).fromNow()}</span>
     </div>
     
     <div class="tweet-reactions"> 
