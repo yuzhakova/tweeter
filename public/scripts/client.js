@@ -37,9 +37,9 @@ const createTweetElement = tweetObj => {
 }
 
 const renderTweets = arrayOfTweetObj => {
-  //Need to append to .tweets-container
+  //Need to prepend (to see latest tweets first) to .tweets-container
   for (obj of arrayOfTweetObj) {
-    $('.tweet-container').append(createTweetElement(obj))
+    $('.tweet-container').prepend(createTweetElement(obj))
   }
 }
 
