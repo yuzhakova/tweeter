@@ -1,3 +1,8 @@
+/* NY to do: July 15
+- make tweet posts appear with no delay
+- make the form clear/blank after tweets are posted
+-
+
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -77,8 +82,9 @@ $(document).ready(function() {
       const dataToPost = ajaxPost('/tweets', data, function() {
         $.get('/tweets', function(data) {
           renderTweets(data)
-          //need to figure out how to clear the text box after tweets are posted
         })
+        // clear the box after tweets are posted
+        $('textarea').val("")
       })
     }
     })
