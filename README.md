@@ -16,13 +16,13 @@ Tweeter is a simple Single Page App (SPA), Twitter clone.
 
 ## Final Product
 Desktop view with both toggle buttons shown and tweet-box hidden
-!["desktop-view"]([add url of a screnshot])
+!["desktop-view"](https://github.com/yuzhakova/tweeter/blob/master/docs/desktop-view.png)
 
 Error message when tweet length exceeded
-!["error-message"]([add url of a screnshot])
+!["error-message"](https://github.com/yuzhakova/tweeter/blob/master/docs/error-message.png)
 
 Mobile view/responsive design
-!["mobile-view"]([add url of a screnshot])
+!["mobile-view"](https://github.com/yuzhakova/tweeter/blob/master/docs/mobile-view.png)
 
 ## Getting Started
 1. Fork this repository, then clone your fork of this repository.
