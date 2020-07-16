@@ -10,7 +10,7 @@
 }
 
 /* new tweet button */
-button {
+.submit-and-display button {
   border: none;
   font-size: medium;
   font-family: "Bungee";
@@ -25,6 +25,10 @@ button {
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
+}
+
+label {
+  font-size: smaller;
 }
 
 /* new tweet box formatting */

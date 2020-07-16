@@ -49,6 +49,11 @@ const renderTweets = arrayOfTweetObj => {
   }
 };
 
+const renderLastTweet = arrayOfTweetObj => {
+  const lastTweet = arrayOfTweetObj[arrayOfTweetObj.length - 1];
+  $('.tweet-container').prepend(createTweetElement(lastTweet));
+};
+
 const ajaxPost = (url, data, callback) => {
   $.post(url, data, callback);
 };
@@ -82,15 +87,24 @@ const resetErrorMessage = violation => {
 };
 
 // re-size tweet-textbox automatically while typing
-  $(document).ready(function() {
-    $('textarea').on('input', function () {
-      this.style.height = 'auto';
-      this.style.height = this.scrollHeight + 'px';
-    })
-    $.get('/tweets', renderTweets);
+$(document).ready(function() {
+  $('textarea').on('input', function() {
+    this.style.height = 'auto';
+    this.style.height = this.scrollHeight + 'px';
+  });
+  //get tweets
+  $.get('/tweets', renderTweets);
 
-  //When the button is clicked, ie when the form is submitted
-  $('button').click(function(event) {
+  // new tweet form set as hidden
+  $('.new-tweet').hide();
+
+  // toggle button 1
+  $('.write').click(function(event) {
+    $('.new-tweet').slideToggle('slow');
+  });
+
+  // button clicked = form submitted
+  $('.submit-and-display button').click(function(event) {
     event.preventDefault();
     const data = $('form').serialize();
     const dataLength = getText(data).length;
@@ -102,8 +116,8 @@ const resetErrorMessage = violation => {
     } else {
       resetErrorMessage();
       ajaxPost('/tweets', data, function() {
-        //Get the tweets immediately after submitting
-        $.get('/tweets', renderTweets);
+        //Get the tweet that was just posted
+        $.get('/tweets', renderLastTweet);
         // clear the box after tweets are posted
         $('textarea').val("");
       });
