@@ -21,7 +21,7 @@ Desktop view with both toggle buttons shown and tweet-box hidden
 Error message when tweet length exceeded
 !["error-message"](https://github.com/yuzhakova/tweeter/blob/master/docs/error-message.png)
 
-Mobile view/responsive design
+Responsive design
 !["mobile-view"](https://github.com/yuzhakova/tweeter/blob/master/docs/mobile-view.png)
 
 ## Getting Started
