@@ -16,27 +16,26 @@ const createTweetElement = tweetObj => {
   const newTweet =
   `
   <article>
-  <header class="tweet-head">
-    <div>
-      <img src=${tweetObj.user.avatars}/>
-      <span>${tweetObj.user.name}</span>
-    </div>
-    <div>
-      <span>${tweetObj.user.handle}</span>
-    </div>
-  </header>
+    <header class="tweet-head">
+      <div>
+        <img src=${tweetObj.user.avatars}/>
+        <span>${tweetObj.user.name}</span>
+      </div>
+      <div>
+        <span>${tweetObj.user.handle}</span>
+      </div>
+    </header>
     <div>
       <span>${escape(tweetObj.content.text)}</span>
     </div>
-  <footer class="tweet-foot">
-    <div>
-    <span>${moment(tweetObj.created_at).fromNow()}</span>
-    </div>
-    
-    <div class="tweet-reactions"> 
-      <span><i class="fas fa-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></span>
-    </div>
-  </footer>
+    <footer class="tweet-foot">
+      <div>
+        <span>${moment(tweetObj.created_at).fromNow()}</span>
+      </div>
+      <div class="tweet-reactions"> 
+        <span><i class="fas fa-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></span>
+      </div>
+    </footer>
   </article>
   `;
   return newTweet;
@@ -98,7 +97,7 @@ $(document).ready(function() {
   // new tweet form set as hidden
   $('.new-tweet').hide();
 
-  // toggle button 1
+  // toggle write new tweet button
   $('.write').click(function(event) {
     $('.new-tweet').slideToggle('slow');
   });
