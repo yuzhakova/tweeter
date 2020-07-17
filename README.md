@@ -11,7 +11,7 @@ Tweeter is a simple Single Page App (SPA), Twitter clone.
 - character counter and tweets length validation
 - error message if 140 char limit is exceeded or tweet-box blank
 - responsive design for an optimized user experience
-- animated toggle button to show/hide tweet-box
+- animated toggle button to show/hide tweet-box + default text area auto-focus when shown
 - fading toggle button appearing when scrolling down to bring the user back up to the top of the page
 
 ## Final Product
