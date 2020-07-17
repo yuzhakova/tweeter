@@ -27,11 +27,12 @@ $(document).ready(function() {
       $(buttonToTriggerScroll).fadeOut();
     }
   });
-  // get to the top by clicking the toggle button
+// get to the top by clicking the toggle button
   $(buttonToTriggerScroll).click(function() {
     $(window).scrollTop(0);
     if ($('.new-tweet').is(':hidden')) {
       $('.new-tweet').show();
     }
+    $('textarea').focus();
   });
 });

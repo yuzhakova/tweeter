@@ -12,11 +12,7 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
- nav {
+nav {
   font-family: "Source Sans Pro";
 }
 
@@ -32,10 +28,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
  .container {
   margin-left: auto;
   margin-right: auto;
@@ -50,7 +42,7 @@ body::-webkit-scrollbar {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0.5em;
-  width: 60%;
+  width: 90%;
 }
 
 article {

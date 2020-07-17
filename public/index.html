@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
@@ -20,7 +21,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
 
     <!-- CDN moment.js to help with displaying the time -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" ></script>
 
     <!-- New Tweets -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
@@ -40,6 +41,9 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
   
+     <!-- Helper functions JS -->
+     <script type="text/javascript" src="/scripts/helpers.js"></script>
+  
     <!-- Character count JS -->
     <script type="text/javascript" src=/scripts/composer-char-counter.js></script>
   
@@ -50,12 +54,10 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav class="nav-Bar">
-
       <div> 
         <span class="logo">TWEETER</span> 
       </div>
       <footer>     
-          
         <button class='write'>
           <span><b>Write</b> a new tweet</span>
           <i class="fas fa-angle-double-down"></i>
@@ -67,7 +69,6 @@
       <div>
         <img src="/images/profile-hex.png"> 
       </div>
-
       <div class="name">
         <h2><span>Natalia</span> Yuzhakova</h2>
       </div>
@@ -75,32 +76,28 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-
-    <section class="new-tweet">
-      
-      <div class="error-message">
-      </div>
-
-        <form action="/tweets" method="POST">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        
-        <div class="submit-and-display">
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
+      <section class="new-tweet">
+        <div class="error-message">
         </div>
-        </form>
-    </section>
 
-    <section class="tweet-container">
-    </section>
+          <form action="/tweets" method="POST">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class="submit-and-display">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+          </form>
+      </section>
 
-    <div class="scroll-to-top">
-      <button title="To top">
-        <i class="fas fa-angle-double-up"></i>
-      </button>
-    </div>
+      <section class="tweet-container">
+      </section>
 
-  </main>
+      <div class="scroll-to-top">
+        <button title="To top">
+          <i class="fas fa-angle-double-up"></i>
+        </button>
+      </div>
+    </main>
   </body>
 </html>

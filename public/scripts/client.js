@@ -4,13 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const escape = function(str) {
-  let div = document.createElement('div');
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
-};
-
-const createTweetElement = tweetObj => {
+  const createTweetElement = tweetObj => {
   //responsible for returning a tweet <article>
   //Must contain entire HTML structure of the tweet
   const newTweet =
@@ -74,14 +68,17 @@ const resetErrorMessage = violation => {
     $(".error-message").empty();
     $(".error-message").append("<p>Your tweet is too long!</p>");
     $(".error-message").slideDown("slow");
+    $('textarea').focus();
   } else if (violation === 'empty') {
     $(".error-message").hide();
     $(".error-message").empty();
     $(".error-message").append("<p>Keep typing...</p>");
     $(".error-message").slideDown("slow");
+    $('textarea').focus();
   } else {
     $(".error-message").hide();
     $(".error-message").empty();
+    $('textarea').focus();
   }
 };
 
@@ -97,9 +94,10 @@ $(document).ready(function() {
   // new tweet form set as hidden
   $('.new-tweet').hide();
 
-  // toggle write new tweet button
+  // toggle write new tweetbutton
   $('.write').click(function(event) {
     $('.new-tweet').slideToggle('slow');
+    $('textarea').focus();
   });
 
   // button clicked = form submitted
@@ -129,3 +127,10 @@ $(document).ready(function() {
     }
   });
 });
+
+// helper function, can be moved to additional file "helpers.js" in future
+const escape = function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};

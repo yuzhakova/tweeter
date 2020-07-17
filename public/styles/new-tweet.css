@@ -1,6 +1,6 @@
 /*  compose tweet */
 .new-tweet {
-  width: 60%;
+  width: 90%;
   margin: 0.5em;
   display: flex;
   flex-wrap: wrap;
@@ -17,7 +17,6 @@
   background-color:#545149;
   color: #ffffff;
 }
-
 
 .submit-and-display {
   font-size: medium;
